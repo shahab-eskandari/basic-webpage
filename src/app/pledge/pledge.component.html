@@ -1,0 +1,7 @@
+<section class="listing">
+  <img class="listing-photo" [src]="pledge.photo" alt="The photo of {{pledge.title}}">
+  <h2 class="listing-heading">{{ pledge.title }}</h2>
+  <h3 class="listing-location">{{ pledge.subtitle }}</h3>
+  <p class="listing-location">{{ pledge.category }}</p>
+  <a [routerLink]="['/details', pledge.id]">Learn More...</a>
+</section>

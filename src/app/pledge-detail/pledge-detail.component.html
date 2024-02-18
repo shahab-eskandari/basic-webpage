@@ -1,0 +1,14 @@
+<article>
+  <img class="listing-photo" [src]="pledge?.photo"
+    alt="The photo of {{pledge?.title}}"/>
+  <section class="listing-description">
+    <h2 class="listing-heading">{{pledge?.title}}</h2>
+    <h3 class="listing-location">{{pledge?.subtitle}}</h3>
+    <p class="listing-location">{{pledge?.description}}</p>
+    <p class="listing-location">{{pledge?.category}}</p>
+  </section>
+  <section class="listing-features">
+    <h2 class="section-heading">About This Pledge:</h2>
+    <p>Units available: {{pledge?.description}}</p>
+  </section>
+</article>
