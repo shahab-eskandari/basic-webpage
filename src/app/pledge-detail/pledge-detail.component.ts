@@ -15,11 +15,12 @@ export class PledgeDetailComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
   pledgeService = inject(PledgeService);
   pledge: Pledge | undefined;
-  pledgeId = -1; 
-  
+   
   constructor(){
-    this.pledgeId = Number(this.route.snapshot.params['id']);
-    this.pledge = this.pledgeService.getPledgeById(this.pledgeId);
+    const pledgeId = parseInt(this.route.snapshot.params['id'],10);
+    this.pledgeService.getPledgeById(pledgeId).then((pledge:Pledge|undefined)=>{
+      this.pledge = pledge;
+    });
     console.log("route object:", this.route.snapshot.params['id']);
   }
 }

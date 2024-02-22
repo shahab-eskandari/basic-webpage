@@ -1,0 +1,28 @@
+{
+  "pledges":[
+    {
+      "id": 1,
+      "title": "CUT DOWN ON YOUR FOOD WASTE",
+      "subtitle": "Eat what you buy, don’t throw food away and start composting your food waste.",
+      "category": "FOOD",
+      "photo": "https://www.pledgefortheplanet.org/images/2531/1/food-waste.jpg",
+      "description": "WHY THIS PLEDGE IS SO IMPORTANT"
+    },
+    {
+      "id": 2,
+      "title": "SWITCH TO A RE-USABLE BOTTLE, CUP AND CUTLERY WHEN YOU'RE ON THE GO",
+      "subtitle": "Reduce single-use plastic waste when you’re out and about.",
+      "category": "PLASTIC",
+      "photo": "https://www.pledgefortheplanet.org/images/2531/1/re-usable.jpg",
+      "description": "WHY THIS PLEDGE IS SO IMPORTANT"
+    },
+    {
+      "id": 3,
+      "title": "WASH CLOTHES AT 30 DEGREES OR BELOW AND DRY NATURALLY",
+      "subtitle": "Change your washing habits to reduce your energy consumption. Don’t wash your clothes about 30 degrees and let them dry naturally rather than using a tumble drier.",
+      "category": "FASHION",
+      "photo": "https://www.pledgefortheplanet.org/images/2531/1/clothes-drying.jpg",
+      "description": "WHY THIS PLEDGE IS SO IMPORTANT"
+    }
+  ]
+}

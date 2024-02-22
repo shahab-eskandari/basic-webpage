@@ -8,13 +8,16 @@ import { pledgesList } from './pledge';
 export class PledgeService {
 
   protected pledgesList = pledgesList;
+  url = 'http://localhost:3000/pledges';
 
-  getAllPledges(): Pledge[] {
-    return this.pledgesList;
+  async getAllPledges(): Promise<Pledge[]> {
+    const data = await fetch(this.url);
+    return await data.json() ?? [];
   }
   
-  getPledgeById(id: number): Pledge | undefined {
-    return this.pledgesList.find(pledge => pledge.id === id);
+  async getPledgeById(id: number): Promise<Pledge | undefined> {
+    const data = await fetch(`${this.url}/${id}`);
+    return await data.json() ?? {};
   }
   
   constructor() { }

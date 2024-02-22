@@ -1,11 +1,11 @@
 <section>
   <form>
-    <input type="text" placeholder="Filter by city">
-    <button class="primary" type="button">Search</button>
+    <input type="text" placeholder="Search in Pledge's Titles" #filter>
+    <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
   </form>
   <section class="results">
     <app-pledge
-      *ngFor="let pledge of pledgesList"
+      *ngFor="let pledge of filteredPledgeList"
       [pledge]="pledge">
     </app-pledge>
   </section>

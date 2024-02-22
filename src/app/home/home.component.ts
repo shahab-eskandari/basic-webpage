@@ -15,10 +15,25 @@ import { PledgeService } from '../pledge.service';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  pledgesList: Pledge[];
+  pledgesList: Pledge[]=[];
   pledgeService: PledgeService = inject(PledgeService);
+  filteredPledgeList: Pledge[] = [];
+
+  filterResults(text: string) {
+    if (!text) {
+      this.filteredPledgeList = this.pledgesList;
+      return;
+    }
+  
+    this.filteredPledgeList = this.pledgesList.filter(
+      pledge => pledge?.title.toLowerCase().includes(text.toLowerCase())
+    );
+  }
 
   constructor(){
-    this.pledgesList = this.pledgeService.getAllPledges();
+    this.pledgeService.getAllPledges().then((pledgesList: Pledge[])=>{
+      this.pledgesList = pledgesList;
+      this.filteredPledgeList = pledgesList;
+    })
   }
 }
